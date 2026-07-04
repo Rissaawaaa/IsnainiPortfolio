@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farah Isnaini - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <canvas id="cursorParticles"></canvas>
+    <div class="stars-container"></div>
+
+    <div id="gameModal" class="modal" style="display:none; align-items:center; justify-content:center;">
+        <canvas id="gameCanvas" width="400" height="400" style="background:#111; border:2px solid #00ffcc;"></canvas>
+        <button id="closeGame" style="position:absolute; top:10px; right:10px; padding:5px 10px;">×</button>
+    </div>
+
+    <!-- ===== STICKY NAVIGATION BAR ===== -->
+    <nav id="mainNav" class="main-nav">
+        <div class="nav-inner">
+            <a href="#home" class="nav-logo">FI</a>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#Work" class="nav-link">Work</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="top-bar">
+        <h1>FARAH ISNAINI PORTFOLIO</h1>
+        <p>Est. 2026 • Status: <span class="blink">Online</span></p>
+    </header>
+
+    <div id="main-grid">
+
+        <main class="column wide">
+
+            <div class="glass-box" id="home">
+                <div class="hero-window">
+                    <div class="hero-pic-container">
+                        <img src="img/photo_6113987243119678603_y.jpg" alt="Farah Isnaini" class="hero-pic">
+                    </div>
+                    <div class="hero-info">
+                        <span class="eyebrow">Portfolio / 2026</span>
+                        <h2>FARAH ISNAINI MOHD ROSIKHWAN HARRIS</h2>
+                        <div class="job-title">Inspired to be: Digital Media Content Designer & Game Developer</div>
+
+                        <ul class="hero-spec-list">
+                            <li><strong>Game & Animation:</strong> Focuses on asset generation, narrative implementation, and structural level transition pipelines.</li>
+                            <li><strong>Web Content & Social Media:</strong> Experienced in rich image manipulation, vector layouts, and high-impact digital storytelling productions.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="status-line">
+                <span class="label">TIME:</span>
+                <span id="clock"></span>
+            </div>
+
+            <div class="marquee-container">
+                <div class="marquee-track">
+                    <span class="marquee-text">
+                        WELCOME TO MY DIGITAL PORTFOLIO... ✩ LATEST PROJECT: UNREAL ENGINE GAME RELEASED! ✩ LOOKING FOR INTERNSHIP OPPORTUNITIES... ✩
+                    </span>
+                </div>
+            </div>
+
+            <button onclick="toggleTheme()" style="margin-top: 10px; margin-bottom: 10px;">Switch Theme.</button>
+
+            <div class="glass-box" id="Work">
+                <span class="eyebrow">Selected Work</span>
+                <h2>The Project Room</h2>
+                <p class="section-subtitle">A compilation of technical work and digital media executions developed throughout my studies.</p>
+
+                <div class="work-category">
+                    <div class="work-category-header">
+                        <span class="work-category-number">1</span>
+                        <span class="work-category-title">Photography</span>
+                    </div>
+                    <p class="work-category-desc">Captured productions with focus on depth composition and technical exposure correction.</p>
+                    <div class="work-grid hover-grid">
+                        <div class="work-item-hover" onclick="openGalleryModal(['img/42364a2d-246f-42a1-bd7e-b86c94368452.jpg','img/DSC02378.jpeg','img/DSC02491.JPG','img/SIR IQBAL PHOTO NGT.png','img/NGT CREW 1.png'], 'Photography', 0)">
+                            <img src="img/42364a2d-246f-42a1-bd7e-b86c94368452.jpg" alt="Photography Portrait">
+                            <div class="work-item-overlay">
+                                <div class="work-info">Portrait Photography</div>
+                                <div class="work-meta">Gear: Sony A6400 <br>Software:Adobe Lightroom</div>
+                            </div>
+                        </div>
+                        <div class="work-item-hover" onclick="openGalleryModal(['img/42364a2d-246f-42a1-bd7e-b86c94368452.jpg','img/DSC02378.jpeg','img/DSC02491.JPG','img/SIR IQBAL PHOTO NGT.png','img/NGT CREW 1.png'], 'Photography', 1)">
+                            <img src="img/DSC02378.jpeg" alt="Photography Detail">
+                            <div class="work-item-overlay">
+                                <div class="work-info">Portrait Photography</div>
+                                <div class="work-meta">Gear: Sony A6400 <br>Software:Adobe Lightroom</div>
+                            </div>
+                        </div>
+						
+						<div class="work-item-hover" onclick="openGalleryModal(['img/42364a2d-246f-42a1-bd7e-b86c94368452.jpg','img/DSC02378.jpeg','img/DSC02491.JPG','img/SIR IQBAL PHOTO NGT.png','img/NGT CREW 1.png'], 'Photography', 2)">
+                            <img src="img/DSC02491.JPG" alt="Photography Detail">
+                            <div class="work-item-overlay">
+                                <div class="work-info">Portrait Photography</div>
+                                <div class="work-meta">Gear: Sony A6400 <br>Software:Adobe Lightroom</div>
+                            </div>
+                        </div>
+						
+						<div class="work-item-hover" onclick="openGalleryModal(['img/42364a2d-246f-42a1-bd7e-b86c94368452.jpg','img/DSC02378.jpeg','img/DSC02491.JPG','img/SIR IQBAL PHOTO NGT.png','img/NGT CREW 1.png'], 'Photography', 3)">
+                            <img src="img/SIR IQBAL PHOTO NGT.png" alt="Photography Detail">
+                            <div class="work-item-overlay">
+                                <div class="work-info">Landscape Photography</div>
+                                <div class="work-meta">Gear: Sony A6400 <br>Software:Adobe Photoshop</div>
+                            </div>
+                        </div>
+						
+						<div class="work-item-hover" onclick="openGalleryModal(['img/42364a2d-246f-42a1-bd7e-b86c94368452.jpg','img/DSC02378.jpeg','img/DSC02491.JPG','img/SIR IQBAL PHOTO NGT.png','img/NGT CREW 1.png'], 'Photography', 4)">
+                            <img src="img/NGT CREW 1.png" alt="Photography Detail">
+                            <div class="work-item-overlay">
+                                <div class="work-info">Crowd Photography</div>
+                                <div class="work-meta">Gear: Sony A6400 <br>Software:Adobe Photoshop</div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="work-category">
+                    <div class="work-category-header">
+                        <span class="work-category-number">2</span>
+                        <span class="work-category-title">Videography Productions</span>
+                    </div>
+                    <p class="work-category-desc">Commercial assembly, client briefs, narrative pacing, and creative short form video editing solutions.</p>
+                    <div class="work-grid video-grid">
+                        <div class="video-item">
+                            <div class="video-frame-wrap">
+                                <iframe src="https://www.youtube.com/embed/ypGgt7Hxq-Q" title="Lenscation Travel Vlog" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                            </div>
+                            <div class="work-info">Lenscation Travel Vlog</div>
+                            <div class="work-meta">Role: Director & Editor<br>Production Pacing Practice</div>
+                        </div>
+                        <div class="video-item">
+                            <div class="video-frame-wrap">
+                                <iframe src="https://www.youtube.com/embed/m3S2u1yUrhE" title="Food Documentary" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                            </div>
+                            <div class="work-info">Food Documentary</div>
+                            <div class="work-meta">Type: Client Content Brief<br>Audio Mix & Story Editing</div>
+                        </div>
+                        <div class="video-item">
+                            <div class="video-frame-wrap">
+                                <iframe src="https://www.youtube.com/embed/ldy5IkXgeVk" title="MV Mashup Editing" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                            </div>
+                            <div class="work-info">MV Mashup Editing</div>
+                            <div class="work-meta">Focus: Creative Synchro Montage<br>Software: CapCut Pro</div>
+                        </div>
+						 <div class="video-item">
+                            <div class="video-frame-wrap">
+                                <iframe src="https://www.youtube.com/embed/3CoKOQwfT1I?si=gUVf6cP1H7tCikLx" title="Game Animation Edit" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                            </div>
+                            <div class="work-info">Game Animation Edit</div>
+                            <div class="work-meta">Role: Editor<br>Production Pacing Practice</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-category">
+                    <div class="work-category-header">
+                        <span class="work-category-number">3</span>
+                        <span class="work-category-title">2D & 3D Animation</span>
+                    </div>
+                    <p class="work-category-desc">Animated explainer assets with sound layout syncing, asset framing, and motion mechanics. More pieces coming soon.</p>
+                    <div class="work-grid video-grid">
+                        <div class="video-item">
+                            <div class="video-frame-wrap">
+                                <iframe src="https://www.youtube.com/embed/JRAwdAL4Bi0?si=bu9SsNwHRECHRxzk" title="Animated Explainer Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                            </div>
+                            <div class="work-info">2D Animated Explainer Video</div>
+                            <div class="work-meta">Software: Adobe After Effect & Adobe Illustrator<br>2D Animation Practice</div>
+                        </div>
+                        <div class="video-item">
+                            <div class="video-frame-wrap">
+                                <iframe src="https://www.youtube.com/embed/pw8SXV7K9LU?si=mnQYx9zi7WLTrcoP" title="3D Logo Edit" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                            </div>
+                            <div class="work-info">3D Motion Graphic Google Logo</div>
+                            <div class="work-meta">Software: Adobe After Effect<br>Production Pacing Practice</div>
+                        </div>
+						
+						<div class="video-item">
+                            <div class="video-frame-wrap">
+                                <iframe src="https://www.youtube.com/embed/NUYmgnhxHAc?si=jc8dUfo9rPHtnPti" title="AE Edit" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                            </div>
+                            <div class="work-info">2D Motion Graphic</div>
+                            <div class="work-meta">Software: Adobe After Effect<br>Practising After Effect</div>
+                        </div>
+						
+                    </div>
+                </div>
+
+                <div class="work-category">
+                    <div class="work-category-header">
+                        <span class="work-category-number">4</span>
+                        <span class="work-category-title">Picture Manipulation</span>
+                    </div>
+                    <p class="work-category-desc">Branding identity systems showing conceptual logos implemented across physical product mockups and modern layouts.</p>
+                    <div class="work-grid hover-grid">
+                        <div class="work-item-hover" onclick="openGalleryModal(['img/types of isometric fixed.png','img/FARAH ISNAINI MOHD ROSIKHWAN HARRIS_2024422036_MC1121A .jpg.jpg','img/IG POSTING MOCKUP bebi.png','img/CAR PIXEL STRETCH TREND.png'], 'Picture Manipulation', 0)">
+                            <img src="img/types of isometric fixed.png" alt="Isometric Information">
+                            <div class="work-item-overlay">
+                                <div class="work-info">Branding & Assets</div>
+                                <div class="work-meta">Software: Adobe Illustrator</div>
+                            </div>
+                        </div>
+						<div class="work-item-hover" onclick="openGalleryModal(['img/types of isometric fixed.png','img/FARAH ISNAINI MOHD ROSIKHWAN HARRIS_2024422036_MC1121A .jpg.jpg','img/IG POSTING MOCKUP bebi.png','img/CAR PIXEL STRETCH TREND.png'], 'Picture Manipulation', 1)">
+                            <img src="img/FARAH ISNAINI MOHD ROSIKHWAN HARRIS_2024422036_MC1121A .jpg.jpg" alt="Photoshop Artwork">
+                            <div class="work-item-overlay">
+                                <div class="work-info">Photo Manipulation</div>
+                                <div class="work-meta">Gear: Studio Capture<br>Software: Adobe Photoshop</div>
+                            </div>
+                        </div>
+						<div class="work-item-hover" onclick="openGalleryModal(['img/types of isometric fixed.png','img/FARAH ISNAINI MOHD ROSIKHWAN HARRIS_2024422036_MC1121A .jpg.jpg','img/IG POSTING MOCKUP bebi.png','img/CAR PIXEL STRETCH TREND.png'], 'Picture Manipulation', 2)">
+                            <img src="img/IG POSTING MOCKUP bebi.png" alt="Photoshop Artwork">
+                            <div class="work-item-overlay">
+                                <div class="work-info">Photo Manipulation</div>
+                                <div class="work-meta">Gear: Studio Capture<br>Software: Adobe Photoshop</div>
+                            </div>
+                        </div>
+						
+						<div class="work-item-hover" onclick="openGalleryModal(['img/types of isometric fixed.png','img/FARAH ISNAINI MOHD ROSIKHWAN HARRIS_2024422036_MC1121A .jpg.jpg','img/IG POSTING MOCKUP bebi.png','img/CAR PIXEL STRETCH TREND.png'], 'Picture Manipulation', 3)">
+                            <img src="img/CAR PIXEL STRETCH TREND.png" alt="Photoshop Artwork">
+                            <div class="work-item-overlay">
+                                <div class="work-info">Photo Manipulation</div>
+                                <div class="work-meta">Gear: GTA5 <br>Software: Adobe Photoshop</div>
+                            </div>
+			
+                        </div>
+						
+                    </div>
+                </div>
+
+                <div class="work-category">
+                    <div class="work-category-header">
+                        <span class="work-category-number">5</span>
+                        <span class="work-category-title">Core Engineering & Technical Skills</span>
+                    </div>
+                    <p class="work-category-desc">Interactive code structures, level pipelines, game design principles, and automated generative workflows. CLICK A TILE TO VIEW THE LIVE PROJECT.</p>
+                    <div class="work-grid hover-grid">
+                        <a href="https://betafiesta.itch.io/hikayat-malim-deman" target="_blank" class="work-item-hover work-item-link">
+                            <img src="img/WhatsApp Image 2026-02-05 at 5.02.19 AM.jpeg" alt="Unreal Engine Game Integration">
+                            <div class="work-item-overlay">
+                                <div class="work-info">Game Development (UE5)</div>
+                                <div class="work-meta">Project: Hikayat Malim Deman. Node state blueprint mechanisms, level transitions, and visual interaction.</div>
+                            </div>
+                        </a>
+                        <a href="https://uitmisnaini.github.io/GameWebsiteIsnaini/" target="_blank" class="work-item-hover work-item-link">
+                            <img src="img/Screenshot 2026-03-15 070134.png" alt="HTML CSS Structure">
+                            <div class="work-item-overlay">
+                                <div class="work-info">Interactive Web Coding</div>
+                                <div class="work-meta">System: Pure HTML & CSS frontend interfaces, reactive frameworks, and custom layout styling.</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 20px 0;">
+
+               
+            </div>
+        </main>
+    </div>
+
+    <div class="full-width-section">
+        <div class="glass-box" id="about">
+            <span class="eyebrow">Background</span>
+            <h2>Professional Profile & Background</h2>
+            <div class="resume-layout">
+
+                <div class="resume-left">
+                    <img src="img/FARAH ISNAINI.jpg" alt="Farah Isnaini Professional" class="resume-pic">
+                    <p style="font-size:0.75em; color:var(--accent2);">Farah Isnaini M.R.H.</p>
+                </div>
+
+                <div class="resume-right">
+
+                    <h4>Educational Background</h4>
+
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <span>DIPLOMA IN DIGITAL MEDIA COMMUNICATION TECHNOLOGY</span>
+                            <span>2024 - 2027</span>
+                        </div>
+                        <div class="timeline-sub">Universiti Teknologi MARA (UiTM) Kampus Alor Gajah, Melaka</div>
+                        <div>Focus: Game Development (UE5), Web Design (HTML/CSS), 2D/3D Animation, Digital Communication. (Current CGPA: 3.61)</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <span>SIJIL PELAJARAN MALAYSIA (SPM)</span>
+                            <span>[2023]</span>
+                        </div>
+                        <div class="timeline-sub">[SMK KAMPUNG PASIR PUTIH,IPOH]</div>
+                        <div>Results: [3A 4B]</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <span>UJIAN PENILAIAN SEKOLAH RENDAH (UPSR)</span>
+                            <span>[2018]</span>
+                        </div>
+                        <div class="timeline-sub">[SK JALAN PEGOH,IPOH]</div>
+                        <div>Results: [1A 3B 2C]</div>
+                    </div>
+
+                    <h4>Extracurricular Activities</h4>
+                    <ul class="resume-list">
+                        <li><strong>Vice Project Leader (2026):</strong> Commquest Arena Pixelfes 2.0 High Committee Member </li><li><strong>Junior Photographer Bureau (2025):</strong> Next Gen Talk Pixelfes 1.0 </li>
+                        <li><strong>Computer Club President School (2023):</strong> Led club operations and activities, organizing tech-focused events and guiding fellow members.</li><li><strong>School Prefect (2022):  </strong>  Promoted to general school prefect, responsible for maintaining discipline and assisting with school activities and operations.</li>
+                        <li><strong>Secretary, Persatuan Puteri Islam (2022): </strong> Responsible for administrative records, correspondence, and activity coordination within the school's Girl Guides association.</li><li><strong>School Library Prefect (2019–2021):  </strong>  Assisted in managing the school's resource centre, supporting students and teachers with library and resource access while upholding discipline among peers.</li>
+                    </ul>
+
+                    <h4>Awards & Recognitions</h4>
+                    <ul class="resume-list">
+                        <li><strong>Dean's List Award:</strong> Achieved academic excellence for [Semester 1 & 3].</li><li><strong>Achieved Gold Place:</strong> Melaka International Intellectual Exposition 2026 (MIIEx 2026)</li>
+                    </ul>
+
+                    <h4>Personal Hobbies</h4>
+                    <p style="font-size:0.85em; margin:5px 0 0 0;">Immersing myself in competitive gaming environments, producing motion design projects in After Effects, and experimenting with open-world videography in GTA 5 to continuously explore and master new digital mediums.</p>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SKILLS / SOFTWARE PROFICIENCY SECTION ===== -->
+    <div class="full-width-section">
+        <div class="glass-box" id="skills">
+            <span class="eyebrow center">Toolkit</span>
+            <h3 class="center-heading">Softwares Used</h3>
+            <p class="section-subtitle" style="text-align:center;">Tools and software applied across photography, video, design, and development work.</p>
+
+            <div class="skills-tier">
+                <div class="skills-tier-label">
+                    <span class="tier-dot tier-advanced"></span> Advanced
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon" style="background:#3a2a22;">AL</div>
+                        <span class="skill-name">Adobe Lightroom</span>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon" style="background:#3a2a22;">Ae</div>
+                        <span class="skill-name">After Effects</span>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon" style="background:#3a2a22;">Ptx</div>
+                        <span class="skill-name">Powerpoint</span>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon" style="background:#3a2a22;">Dw</div>
+                        <span class="skill-name">Adobe Dreamweaver</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-tier">
+                <div class="skills-tier-label">
+                    <span class="tier-dot tier-intermediate"></span> Intermediate
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon" style="background:#3a2a22;">Pr</div>
+                        <span class="skill-name">Premiere Pro</span>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon" style="background:#3a2a22;">My</div>
+                        <span class="skill-name">Maya Animation</span>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon" style="background:#3a2a22;">Ai</div>
+                        <span class="skill-name">Adobe Illustrator</span>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon" style="background:#3a2a22;">UE5</div>
+                        <span class="skill-name">Unreal Engine 5</span>
+                    </div>
+  
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="full-width-section">
+        <div class="glass-box contact-box" id="contact">
+            <span class="eyebrow center">Get In Touch</span>
+            <h3 class="center-heading">Find Me At</h3>
+
+            <!-- NEW: Direct contact info panel (email + phone), styled to match the dark glass theme -->
+            <div class="contact-info-panel">
+                <div class="contact-info-row">
+                    <span class="contact-info-icon">✉</span>
+                    <span class="contact-info-label">Email:</span>
+                    <a href="mailto:isnainifarah0@gmail.com" class="contact-info-value">isnainifarah0@gmail.com</a>
+                </div>
+               
+            </div>
+
+            <div class="contact-links">
+                <a href="https://github.com/Rissaawaaa" target="_blank" class="contact-chip">Github</a>
+                <a href="https://www.instagram.com/cpprrs/" target="_blank" class="contact-chip">Instagram</a>
+                <a href="https://discord.gg/2z8Wjxf3wR" target="_blank" class="contact-chip">Discord</a>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <p>© 2026 | Built for Internship & Job Application | Hits: 00042</p>
+    </footer>
+
+    <div id="imageModal" class="modal">
+        <span class="close-modal" onclick="closeGalleryModal()">×</span>
+        <button id="prevBtn" class="gallery-nav-btn" onclick="changeImage(-1)">◀</button>
+        <div class="modal-content-wrapper">
+            <img class="modal-content" id="fullImage" alt="Full Preview">
+            <div id="galleryCaption" style="color: var(--accent2); text-align: center; margin-top: 10px; font-size: 0.9em;"></div>
+        </div>
+        <button id="nextBtn" class="gallery-nav-btn" onclick="changeImage(1)">▶</button>
+    </div>
+
+    <script>
+    let currentGalleryImages = [];
+    let currentImageIndex = 0;
+    let currentCategoryTitle = "";
+
+    function openGalleryModal(imageArray, categoryTitle, startIndex = 0) {
+        currentGalleryImages = imageArray;
+        currentImageIndex = startIndex;
+        currentCategoryTitle = categoryTitle;
+        document.getElementById("imageModal").style.display = "flex";
+        updateModalImage();
+    }
+
+    function openModal(imageSrc) {
+        currentGalleryImages = [imageSrc];
+        currentImageIndex = 0;
+        currentCategoryTitle = "Asset View";
+        document.getElementById("imageModal").style.display = "flex";
+        updateModalImage();
+    }
+
+    function updateModalImage() {
+        const fullImg = document.getElementById("fullImage");
+        const caption = document.getElementById("galleryCaption");
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+
+        fullImg.src = currentGalleryImages[currentImageIndex];
+        caption.textContent = `${currentCategoryTitle} (${currentImageIndex + 1} / ${currentGalleryImages.length})`;
+
+        if (currentGalleryImages.length <= 1) {
+            prevBtn.style.display = "none";
+            nextBtn.style.display = "none";
+        } else {
+            prevBtn.style.display = "block";
+            nextBtn.style.display = "block";
+        }
+    }
+
+    function changeImage(direction) {
+        currentImageIndex += direction;
+        if (currentImageIndex >= currentGalleryImages.length) {
+            currentImageIndex = 0;
+        } else if (currentImageIndex < 0) {
+            currentImageIndex = currentGalleryImages.length - 1;
+        }
+        updateModalImage();
+    }
+
+    function closeGalleryModal() {
+        document.getElementById("imageModal").style.display = "none";
+    }
+
+    document.addEventListener('keydown', e => {
+        if (document.getElementById("imageModal").style.display === "flex") {
+            if (e.key === "ArrowRight") changeImage(1);
+            if (e.key === "ArrowLeft") changeImage(-1);
+            if (e.key === "Escape") closeGalleryModal();
+        }
+    });
+
+    function updateClock(){
+        const now = new Date();
+        document.getElementById("clock").textContent = now.toLocaleTimeString();
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    function toggleTheme(){
+        document.body.classList.toggle("altTheme");
+    }
+
+    // ====== Cursor Particles ======
+    const particleCanvas = document.getElementById('cursorParticles');
+    const pctx = particleCanvas.getContext('2d');
+    particleCanvas.width = window.innerWidth;
+    particleCanvas.height = window.innerHeight;
+
+    let particles = [];
+
+    window.addEventListener('mousemove', e => {
+        for (let i = 0; i < 1; i++) {
+            particles.push({
+                x: e.clientX + Math.random() * 10 - 5,
+                y: e.clientY + Math.random() * 10 - 5,
+                alpha: 0.6,
+                size: Math.random() * 2.5 + 1.5,
+                color: Math.random() > 0.5 ? '#d17fe0' : '#4fd1c5',
+                dx: (Math.random() - 0.5) * 0.6,
+                dy: (Math.random() - 0.5) * 0.6
+            });
+        }
+    });
+
+    function drawParticles() {
+        pctx.clearRect(0, 0, particleCanvas.width, particleCanvas.height);
+        particles.forEach((p, i) => {
+            pctx.fillStyle = p.color;
+            pctx.globalAlpha = p.alpha;
+            pctx.beginPath();
+            pctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+            pctx.fill();
+            p.x += p.dx;
+            p.y += p.dy;
+            p.alpha -= 0.02;
+            if (p.alpha <= 0) particles.splice(i, 1);
+        });
+        requestAnimationFrame(drawParticles);
+    }
+    drawParticles();
+
+    window.addEventListener('resize', () => {
+        particleCanvas.width = window.innerWidth;
+        particleCanvas.height = window.innerHeight;
+    });
+
+    // ====== Scroll Animation for Work Items ======
+    const workItems = document.querySelectorAll('.work-item, .work-item-hover, .video-item');
+    function checkVisibility() {
+        const triggerBottom = window.innerHeight * 0.9;
+        workItems.forEach(item => {
+            const boxTop = item.getBoundingClientRect().top;
+            if (boxTop < triggerBottom) item.classList.add('visible');
+        });
+    }
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility();
+
+    // ====== Sticky Nav Active Link Highlight ======
+    const navLinks = document.querySelectorAll('.nav-link');
+    const navSections = Array.from(navLinks).map(link => document.querySelector(link.getAttribute('href')));
+
+    function updateActiveNav() {
+        let currentIndex = 0;
+        navSections.forEach((section, i) => {
+            if (section && section.getBoundingClientRect().top - 120 <= 0) {
+                currentIndex = i;
+            }
+        });
+        navLinks.forEach((link, i) => {
+            link.classList.toggle('active', i === currentIndex);
+        });
+
+        const nav = document.getElementById('mainNav');
+        if (window.scrollY > 30) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+    }
+    window.addEventListener('scroll', updateActiveNav);
+    updateActiveNav();
+
+    // ===== Mini Hidden Game: Pixel Dodger =====
+    const gameModal = document.getElementById('gameModal');
+    const closeGame = document.getElementById('closeGame');
+    const gameCanvas = document.getElementById('gameCanvas');
+    const gctx = gameCanvas.getContext('2d');
+
+    let player = { x: 180, y: 360, width: 40, height: 20, speed: 5 };
+    let blocks = [];
+    let gameInterval;
+    let blockSpawnInterval;
+    let gameOver = false;
+
+    function spawnBlock() {
+        const size = Math.random() * 30 + 20;
+        blocks.push({
+            x: Math.random() * (gameCanvas.width - size),
+            y: -size,
+            width: size,
+            height: size,
+            speed: Math.random() * 2 + 2
+        });
+    }
+
+    function drawGame() {
+        gctx.clearRect(0, 0, gameCanvas.width, gameCanvas.height);
+        gctx.fillStyle = '#ff00ff';
+        gctx.fillRect(player.x, player.y, player.width, player.height);
+
+        blocks.forEach((b, i) => {
+            gctx.fillStyle = '#00ffcc';
+            gctx.fillRect(b.x, b.y, b.width, b.height);
+            b.y += b.speed;
+
+            if (player.x < b.x + b.width &&
+                player.x + player.width > b.x &&
+                player.y < b.y + b.height &&
+                player.y + player.height > b.y) {
+                    gameOver = true;
+            }
+            if (b.y > gameCanvas.height) blocks.splice(i, 1);
+        });
+
+        if(gameOver){
+            gctx.fillStyle = '#ff0000';
+            gctx.font = '20px "Courier New"';
+            gctx.fillText('GAME OVER', 120, 200);
+            clearInterval(blockSpawnInterval);
+            cancelAnimationFrame(gameInterval);
+        } else {
+            gameInterval = requestAnimationFrame(drawGame);
+        }
+    }
+
+    let keys = {};
+    document.addEventListener('keydown', e => keys[e.key] = true);
+    document.addEventListener('keyup', e => keys[e.key] = false);
+
+    function movePlayer(){
+        if(keys['ArrowLeft'] && player.x > 0) player.x -= player.speed;
+        if(keys['ArrowRight'] && player.x + player.width < gameCanvas.width) player.x += player.speed;
+        if(!gameOver) requestAnimationFrame(movePlayer);
+    }
+
+    document.addEventListener('keydown', e => {
+        if(e.shiftKey && e.key.toLowerCase() === 'g'){
+            triggerGame();
+        }
+    });
+
+    closeGame.addEventListener('click', () => {
+        gameModal.style.display = 'none';
+        clearInterval(blockSpawnInterval);
+        cancelAnimationFrame(gameInterval);
+    });
+
+    function triggerGame() {
+        gameModal.style.display = 'flex';
+        blocks = [];
+        player.x = 180;
+        player.y = 360;
+        gameOver = false;
+        clearInterval(blockSpawnInterval);
+        cancelAnimationFrame(gameInterval);
+        drawGame();
+        movePlayer();
+        blockSpawnInterval = setInterval(spawnBlock, 1000);
+    }
+
+    let count = 6769;
+    </script>
+</body>
+</html>
